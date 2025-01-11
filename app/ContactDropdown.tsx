@@ -76,7 +76,7 @@ export default function ContactDropdown() {
 							exit="exit"
 						>
 							{copied ? (
-								<span className="inline-flex items-center gap-2 text-emerald-700">
+								<span className="inline-flex items-center gap-2 text-[#46A758]">
 									Copied!
 									<Icon
 										name="check-circle"

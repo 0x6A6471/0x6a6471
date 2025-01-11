@@ -66,7 +66,7 @@ export default function ContactDropdown() {
 	return (
 		<DropdownMenu.Root open={open} onOpenChange={setOpen}>
 			<DropdownMenu.Trigger asChild>
-				<button className="rounded-[14px] bg-gray-700 py-[7.8px] px-4 font-medium text-gray-100 hover:bg-gray-700/80 hover:text-gray-50 focus:outline-none">
+				<button className="rounded-[14px] bg-gray-700 px-4 py-[7.8px] font-medium text-gray-100 hover:bg-gray-700/80 hover:text-gray-50 focus:outline-none">
 					<AnimatePresence mode="wait">
 						<motion.span
 							key={copied ? "copied" : "contact"}
@@ -120,7 +120,7 @@ export default function ContactDropdown() {
 								variants={variants}
 							>
 								<DropdownMenu.Item
-									className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-none focus:bg-gray-800 focus:text-orange-primary cursor-default"
+									className="flex cursor-default items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-none focus:bg-gray-800 focus:text-orange-primary"
 									onClick={copyToClipboard}
 								>
 									<Icon name="send" variant="filled" />

@@ -8,6 +8,8 @@ export default {
 	],
 	theme: {
 		colors: {
+			white: "#ffffff",
+			black: "#000000",
 			orange: {
 				mute: "#FFA233",
 				primary: "#F7931A",

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import ContactDropdown from "./ContactDropdown";
+import ContactDropdown from "./contact-dropdown";
 
 export default function Nav() {
 	return (

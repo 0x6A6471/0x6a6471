@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="check-circle-gesalt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.5 3.647A9.953 9.953 0 0 0 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10a9.959 9.959 0 0 0-1.067-4.5M9 12l2 2 5-5"/>
+    </symbol>
+
+    <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 9 6 6 6-6"/>
+    </symbol>
+
+    <symbol id="github-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 12.076C2 6.377 6.274 2 11.839 2 17.443 2 22 6.377 22 12.076c0 4.584-2.742 8.507-6.774 9.87-.524.124-.726-.207-.726-.496 0-.254.035-1.45.035-2.45 0-1-.68-1.918-.68-1.918 2.258-.248 4.637-1.578 4.637-5.543 0-1.156-.403-1.693-1.049-2.436.081-.29.444-1.363-.12-2.808-.847-.29-2.783 1.115-2.783 1.115-.806-.248-1.653-.33-2.54-.33-.847 0-1.694.082-2.5.33 0 0-1.976-1.363-2.782-1.115-.565 1.445-.242 2.519-.121 2.808-.645.743-.968 1.28-.968 2.436 0 3.965 2.298 5.295 4.556 5.543 0 0-.685.78-.685 1.85v2.56c0 .247-.161.578-.685.495C4.782 20.583 2 16.66 2 12.077Z"/>
+    </symbol>
+
+    <symbol id="send-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <g clip-path="url(#a)">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11 13 1.534 3.99c1.055 2.743 1.583 4.114 2.291 4.459a2 2 0 0 0 1.916-.09c.673-.41 1.07-1.825 1.862-4.655l2.863-10.226c.502-1.791.752-2.687.52-3.302a2 2 0 0 0-1.162-1.162c-.615-.233-1.51.018-3.302.52L7.296 5.397C4.466 6.19 3.05 6.586 2.64 7.258a2 2 0 0 0-.09 1.917c.345.708 1.716 1.236 4.459 2.29L11 13Zm0 0 2.5-2.5"/>
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="currentColor" d="M0 0h24v24H0z"/>
+        </clipPath>
+      </defs>
+    </symbol>
+
+    <symbol id="twitter-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.304c0 2.872-1.642 3.931-1.642 3.931v.84C21.358 14.104 16.67 21 8.127 21 5.47 21 3.037 20.263 1 18.961c2.443.3 4.912-.38 6.861-1.865-2.036-.043-3.762-1.344-4.338-3.166.72.1 1.37.088 2.08-.087-2.17-.443-3.718-2.349-3.718-4.51.62.347 1.373.52 2.125.563C2.004 8.61 1.31 5.85 2.55 3.824c2.301 2.733 5.754 4.554 9.605 4.771a4.198 4.198 0 0 1-.133-1.04C12.022 5.038 14.102 3 16.67 3c1.328 0 2.523.52 3.408 1.431A9.936 9.936 0 0 0 23 3.304Z"/>
+    </symbol>
+  </defs>
+</svg>
+

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import ContactDropdown from "./ContactDropdown";
+import ContactDropdown from "./contact-dropdown";
 
 export default function Nav() {
 	return (
@@ -26,7 +26,7 @@ export default function Nav() {
 					</Link>
 				</li>
 				<li className="text-gray-100 hover:text-gray-50">
-					<Link href="/bookshelf">Bookshelf</Link>
+					<Link href="/bookshelf">Books</Link>
 				</li>
 				<li className="text-gray-100 hover:text-gray-50">
 					<Link href="/food">Food</Link>

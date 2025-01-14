@@ -15,11 +15,11 @@ export default async function LibraryPage() {
 
 	return (
 		<div>
-			<h1 className="text-4xl text-center font-semibold mb-8">Books</h1>
+			<h1 className="text-4xl text-center font-semibold mb-8">Library</h1>
 			<p className="text-center">
 				A collections of books I&apos;ve found over the last few years.
 			</p>
-			<div className="h-[1px] my-8 max-w-64 mx-auto bg-gray-900"></div>
+			<div className="h-[1px] my-16 max-w-64 mx-auto bg-gray-900"></div>
 
 			<ul className="space-y-2">
 				{reading?.map(book => (

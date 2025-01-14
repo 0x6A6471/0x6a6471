@@ -1,5 +1,3 @@
-import { Effect } from "effect";
-
 function getTagContent(tag: string, content: string) {
 	const regex = new RegExp(`<${tag}[^>]*>(.*?)<\/${tag}>`, "s");
 	const match = content.match(regex);
@@ -41,6 +39,6 @@ export default async function parseRssFeed(url: string) {
 		return items;
 	} catch (error) {
 		console.error("Error fetching RSS feed:", error);
-		Effect.fail(error);
+		return [];
 	}
 }

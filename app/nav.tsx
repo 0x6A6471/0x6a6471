@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import cn from "@/utils/classNames";
 
 import ContactDropdown from "./contact-dropdown";
 
@@ -25,17 +27,26 @@ export default function Nav() {
 						/>
 					</Link>
 				</li>
-				<li className="text-gray-100 hover:text-gray-50">
-					<Link href="/library">Library</Link>
-				</li>
-				<li className="text-gray-100 hover:text-gray-50">
-					<Link href="/food">Food</Link>
-				</li>
-				<li className="text-gray-100 hover:text-gray-50">
-					<Link href="/blog">Blog</Link>
-				</li>
+				<NavLink href="/library" label="Library" />
+				<NavLink href="/food" label="Food" />
+				<NavLink href="/blog" label="Blog" />
 				<ContactDropdown />
 			</ul>
 		</motion.nav>
+	);
+}
+
+function NavLink({ href, label }: { href: string; label: string }) {
+	const pathname = usePathname();
+
+	return (
+		<li
+			className={cn(
+				pathname === href ? "text-gray-50" : "text-gray-100",
+				"relative hover:text-gray-50",
+			)}
+		>
+			<Link href={href}>{label}</Link>
+		</li>
 	);
 }

@@ -31,7 +31,7 @@ export default function HomePage() {
 					I&apos;m currently writing code to realize this vision at{" "}
 					<Link
 						href="https://onrampbitcoin.com"
-						className="text-orange-primary hover:underline underline-offset-2"
+						className="text-orange-primary underline-offset-2 hover:underline"
 					>
 						Onramp
 					</Link>

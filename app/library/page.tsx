@@ -11,7 +11,7 @@ async function getOkuContent() {
 }
 
 export default async function LibraryPage() {
-	const { read, reading, toRead } = await getOkuContent();
+	const { reading } = await getOkuContent();
 
 	return (
 		<div>

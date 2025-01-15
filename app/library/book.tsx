@@ -1,8 +1,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef } from "react";
+import { type Book } from "@/types/book";
 
-export default function Book({ book, isSelected, onSelect, onClose }) {
-	const itemRef = useRef(null);
+type Props = {
+	book: Book;
+	isSelected: boolean | null;
+	setSelected: (book: Book | null) => void;
+};
+
+export default function BookItem({ book, isSelected, setSelected }: Props) {
+	const itemRef = useRef<HTMLLIElement | null>(null);
 
 	const getItemPosition = () => {
 		if (!itemRef.current) return { top: 0, left: 0 };
@@ -18,7 +25,7 @@ export default function Book({ book, isSelected, onSelect, onClose }) {
 	return (
 		<li
 			ref={itemRef}
-			onClick={() => !isSelected && onSelect(book)}
+			onClick={() => !isSelected && setSelected(book)}
 			className="cursor-pointer relative"
 		>
 			<div
@@ -74,7 +81,7 @@ export default function Book({ book, isSelected, onSelect, onClose }) {
 									<button
 										onClick={e => {
 											e.stopPropagation();
-											onClose();
+											setSelected(null);
 										}}
 										className="text-gray-400 hover:text-gray-200"
 									>
@@ -94,7 +101,7 @@ export default function Book({ book, isSelected, onSelect, onClose }) {
 							className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-10"
 							onClick={e => {
 								e.stopPropagation();
-								onClose();
+								setSelected(null);
 							}}
 						/>
 					</>

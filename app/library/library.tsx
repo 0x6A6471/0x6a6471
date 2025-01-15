@@ -18,8 +18,7 @@ export default function Library({ reading }: Props) {
 					key={book.guid}
 					book={book}
 					isSelected={selected?.guid === book.guid}
-					onSelect={setSelected}
-					onClose={() => setSelected(null)}
+					setSelected={setSelected}
 				/>
 			))}
 		</ul>

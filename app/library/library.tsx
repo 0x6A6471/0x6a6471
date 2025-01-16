@@ -9,7 +9,7 @@ type Props = {
 
 export default function Library({ reading }: Props) {
 	return (
-		<ul className="relative space-y-2">
+		<ul className="relative space-y-2 pt-4">
 			{reading?.map(book => (
 				<BookItem key={book.guid} book={book} />
 			))}

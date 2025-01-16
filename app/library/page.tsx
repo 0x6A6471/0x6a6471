@@ -13,11 +13,12 @@ async function getOkuContent() {
 
 export default async function LibraryPage() {
 	const { reading } = await getOkuContent();
+	console.log(reading);
 
 	return (
 		<div>
 			<h1 className="mb-8 text-center font-semibold text-4xl">Library</h1>
-			<p className="text-center">
+			<p className="text-center text-gray-500">
 				A collections of books I&apos;ve found over the last few years.
 			</p>
 			<div className="mx-auto my-16 h-[1px] max-w-64 bg-gray-900" />

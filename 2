@@ -1,11 +1,8 @@
+import Icon from "@/components/ui/icon";
 import { useRef, useState } from "react";
-import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
-
 import { type Book } from "@/types/book";
-import cn from "@/utils/classNames";
-import Icon from "@/components/ui/icon";
 
 type Props = {
 	book: Book;
@@ -37,17 +34,12 @@ export default function BookItem({ book }: Props) {
 		<Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
 			<Dialog.Trigger asChild ref={itemRef}>
 				<button
-					className={cn(
-						isOpen ? "invisible" : "",
-						"w-full p-4 bg-gray-950 rounded-lg text-left focus:outline-none flex flex-col group relative",
-					)}
+					className={`hover:-translate-y-0.5 transform transition-transform duration-300 ease-in-out w-full p-4 bg-gray-950 rounded-lg text-left focus:outline-none ${
+						isOpen ? "invisible" : ""
+					}`}
 				>
-					<Icon
-						name="arrows-expand"
-						className="absolute right-2.5 top-2.5 rounded-md text-gray-600 focus:outline-none invisible group-hover:visible"
-					/>
-					<span className="truncate text-gray-50">{book.title}</span>
-					<span className="text-gray-500 text-sm mt-2">{book.creator}</span>
+					<p className="truncate text-gray-50">{book.title}</p>
+					<p className="text-gray-400 text-sm mt-2">{book.creator}</p>
 				</button>
 			</Dialog.Trigger>
 
@@ -73,7 +65,7 @@ export default function BookItem({ book }: Props) {
 									left: getItemPosition().left,
 									x: "-50%",
 									y: "-50%",
-									scale: 0,
+									scale: 0.2,
 									opacity: 0,
 								}}
 								animate={{
@@ -93,24 +85,24 @@ export default function BookItem({ book }: Props) {
 									damping: 25,
 									stiffness: 300,
 								}}
-								className="w-[90vw] max-w-lg h-fit max-h-[80vh] rounded-lg bg-gray-1000 overflow-hidden z-20 p-8"
+								className="w-[90vw] max-w-lg h-fit max-h-[80vh] rounded-lg bg-gray-950 overflow-hidden z-20 p-8"
 							>
-								<Image
-									className="mx-auto rounded"
-									src={book.cover}
-									alt="0x6A6471"
-									width={100}
-									height={100}
-								/>
-								<Dialog.Title className="mt-8 text-lg font-medium text-gray-50 text-center">
+								<Dialog.Title className="m-0 text-[17px] font-medium text-mauve12">
 									{book.title}
 								</Dialog.Title>
-								<Dialog.Description className="mt-4 text-gray-400">
+								<Dialog.Description className="mb-5 mt-2.5 text-[15px] leading-normal text-mauve11">
 									{book.description}
 								</Dialog.Description>
+								<div className="mt-[25px] flex justify-end">
+									<Dialog.Close asChild>
+										<button className="inline-flex h-[35px] items-center justify-center rounded bg-green4 px-[15px] font-medium leading-none text-green11 hover:bg-green5 focus:shadow-[0_0_0_2px] focus:shadow-green7 focus:outline-none">
+											Save changes
+										</button>
+									</Dialog.Close>
+								</div>
 								<Dialog.Close asChild>
 									<button
-										className="absolute right-2.5 top-2.5 p-1 rounded-md text-gray-600 focus:outline-none hover:bg-black"
+										className="absolute right-2.5 top-2.5 p-1 rounded-md text-gray-800 focus:outline-none"
 										aria-label="Close"
 									>
 										<Icon name="x" />

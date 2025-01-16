@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import { type Book } from "@/types/book";
 import BookItem from "./book";
 
@@ -9,17 +8,10 @@ type Props = {
 };
 
 export default function Library({ reading }: Props) {
-	const [selected, setSelected] = useState<Book | null>(null);
-
 	return (
 		<ul className="space-y-2 relative">
 			{reading?.map(book => (
-				<BookItem
-					key={book.guid}
-					book={book}
-					isSelected={selected?.guid === book.guid}
-					setSelected={setSelected}
-				/>
+				<BookItem key={book.guid} book={book} />
 			))}
 		</ul>
 	);

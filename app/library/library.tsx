@@ -1,6 +1,6 @@
 "use client";
 
-import { type Book } from "@/types/book";
+import type { Book } from "@/types/book";
 import BookItem from "./book";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 
 export default function Library({ reading }: Props) {
 	return (
-		<ul className="space-y-2 relative">
+		<ul className="relative space-y-2">
 			{reading?.map(book => (
 				<BookItem key={book.guid} book={book} />
 			))}

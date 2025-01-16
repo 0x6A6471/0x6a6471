@@ -3,7 +3,7 @@ import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { type Book } from "@/types/book";
+import type { Book } from "@/types/book";
 import cn from "@/utils/classNames";
 import Icon from "@/components/ui/icon";
 
@@ -39,15 +39,15 @@ export default function BookItem({ book }: Props) {
 				<button
 					className={cn(
 						isOpen ? "invisible" : "",
-						"w-full p-4 bg-gray-950 rounded-lg text-left focus:outline-none flex flex-col group relative",
+						"group relative flex w-full flex-col rounded-lg bg-gray-950 p-4 text-left focus:outline-none",
 					)}
 				>
 					<Icon
 						name="arrows-expand"
-						className="absolute right-2.5 top-2.5 rounded-md text-gray-600 focus:outline-none invisible group-hover:visible"
+						className="invisible absolute top-2.5 right-2.5 rounded-md text-gray-600 focus:outline-none group-hover:visible"
 					/>
 					<span className="truncate text-gray-50">{book.title}</span>
-					<span className="text-gray-500 text-sm mt-2">{book.creator}</span>
+					<span className="mt-2 text-gray-500 text-sm">{book.creator}</span>
 				</button>
 			</Dialog.Trigger>
 
@@ -93,7 +93,7 @@ export default function BookItem({ book }: Props) {
 									damping: 25,
 									stiffness: 300,
 								}}
-								className="w-[90vw] max-w-lg h-fit max-h-[80vh] rounded-lg bg-gray-1000 overflow-hidden z-20 p-8"
+								className="z-20 h-fit max-h-[80vh] w-[90vw] max-w-lg overflow-hidden rounded-lg bg-gray-1000 p-8"
 							>
 								<Image
 									className="mx-auto rounded"
@@ -102,7 +102,7 @@ export default function BookItem({ book }: Props) {
 									width={100}
 									height={100}
 								/>
-								<Dialog.Title className="mt-8 text-lg font-medium text-gray-50 text-center">
+								<Dialog.Title className="mt-8 text-center font-medium text-gray-50 text-lg">
 									{book.title}
 								</Dialog.Title>
 								<Dialog.Description className="mt-4 text-gray-400">
@@ -110,7 +110,7 @@ export default function BookItem({ book }: Props) {
 								</Dialog.Description>
 								<Dialog.Close asChild>
 									<button
-										className="absolute right-2.5 top-2.5 p-1 rounded-md text-gray-600 focus:outline-none hover:bg-black"
+										className="absolute top-2.5 right-2.5 rounded-md p-1 text-gray-600 hover:bg-black focus:outline-none"
 										aria-label="Close"
 									>
 										<Icon name="x" />

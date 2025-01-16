@@ -13,7 +13,6 @@ async function getOkuContent() {
 
 export default async function LibraryPage() {
 	const { reading } = await getOkuContent();
-	console.log(reading);
 
 	return (
 		<div>

@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import parseRssFeed from "@/lib/rss";
 import Library from "./library";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 async function getOkuContent() {
 	const [read, reading, toRead] = await Promise.all([

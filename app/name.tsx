@@ -14,7 +14,7 @@ export default function Name() {
 			<AnimatePresence mode="wait">
 				<motion.p
 					key={isHovered ? "jdq" : "0x6A6471"}
-					className="font-medium text-gray-500 text-lg"
+					className="font-medium text-gray-700 text-lg"
 					initial={{ opacity: 1, y: 0 }}
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: -0 }}

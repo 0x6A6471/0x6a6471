@@ -47,7 +47,7 @@ export default function BookItem({ book }: Props) {
 						className="invisible absolute top-2.5 right-2.5 text-gray-600 focus:outline-none group-hover:visible"
 					/>
 					<span className="truncate text-gray-50">{book.title}</span>
-					<span className="mt-2 text-gray-500 text-sm">{book.creator}</span>
+					<span className="mt-2 text-gray-400 text-sm">{book.creator}</span>
 				</button>
 			</Dialog.Trigger>
 
@@ -94,7 +94,7 @@ export default function BookItem({ book }: Props) {
 										damping: 25,
 										stiffness: 300,
 									}}
-									className="z-50 h-full w-full sm:h-fit sm:max-h-[90vh] sm:w-[90vw] sm:max-w-lg overflow-hidden sm:rounded-[20px] bg-gray-1000 p-8 overflow-y-auto"
+									className="z-50 h-full w-full sm:h-fit sm:max-h-[90vh] sm:w-[90vw] sm:max-w-lg overflow-hidden sm:rounded-[20px] bg-gray-950/50 p-8 overflow-y-auto"
 								>
 									<Image
 										className="mx-auto rounded-md"
@@ -106,7 +106,7 @@ export default function BookItem({ book }: Props) {
 									<Dialog.Title className="mt-8 text-center font-medium text-gray-50 text-lg">
 										{book.title}
 									</Dialog.Title>
-									<Dialog.Description className="mt-4 text-gray-400">
+									<Dialog.Description className="mt-4 text-gray-500">
 										{book.description}
 									</Dialog.Description>
 									<Dialog.Close asChild>

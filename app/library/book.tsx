@@ -59,7 +59,7 @@ export default function BookItem({ book }: Props) {
 							initial="initial"
 							animate="animate"
 							exit="exit"
-							className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm"
+							className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"
 						/>
 
 						<Dialog.Overlay className="overflow-y-auto">
@@ -94,7 +94,7 @@ export default function BookItem({ book }: Props) {
 										damping: 25,
 										stiffness: 300,
 									}}
-									className="z-50 h-full w-full overflow-hidden overflow-y-auto bg-gray-950/50 p-8 sm:h-fit sm:max-h-[90vh] sm:w-[90vw] sm:max-w-lg sm:rounded-[20px]"
+									className="z-50 h-full w-full overflow-hidden overflow-y-auto bg-gray-950/50 p-8 sm:h-fit sm:max-h-[60vh] sm:w-[90vw] sm:max-w-lg sm:rounded-[20px]"
 								>
 									{book.cover ? (
 										<Image
@@ -112,7 +112,7 @@ export default function BookItem({ book }: Props) {
 											className="mx-auto rounded-md"
 										/>
 									)}
-									<Dialog.Title className="mt-8 text-center font-medium text-gray-50 text-lg">
+									<Dialog.Title className="mt-8 text-center font-medium text-gray-50 text-lg max-w-xs mx-auto">
 										{book.title}
 									</Dialog.Title>
 									<Dialog.Description className="mt-4 text-gray-500">

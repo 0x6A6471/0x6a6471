@@ -39,7 +39,7 @@ export default function BookItem({ book }: Props) {
 				<button
 					className={cn(
 						isOpen ? "invisible" : "",
-						"group relative flex w-full flex-col bg-gray-950 p-4 text-left focus:outline-none rounded-[20px]",
+						"group relative flex w-full flex-col rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none",
 					)}
 				>
 					<Icon
@@ -64,7 +64,7 @@ export default function BookItem({ book }: Props) {
 
 						<Dialog.Overlay className="overflow-y-auto">
 							<Dialog.Content
-								className="fixed inset-0 flex items-center justify-center z-50"
+								className="fixed inset-0 z-50 flex items-center justify-center"
 								forceMount
 							>
 								<motion.div
@@ -94,7 +94,7 @@ export default function BookItem({ book }: Props) {
 										damping: 25,
 										stiffness: 300,
 									}}
-									className="z-50 h-full w-full sm:h-fit sm:max-h-[90vh] sm:w-[90vw] sm:max-w-lg overflow-hidden sm:rounded-[20px] bg-gray-950/50 p-8 overflow-y-auto"
+									className="z-50 h-full w-full overflow-hidden overflow-y-auto bg-gray-950/50 p-8 sm:h-fit sm:max-h-[90vh] sm:w-[90vw] sm:max-w-lg sm:rounded-[20px]"
 								>
 									<Image
 										className="mx-auto rounded-md"

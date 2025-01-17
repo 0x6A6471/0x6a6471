@@ -46,7 +46,7 @@ export default function BookItem({ book }: Props) {
 						name="arrows-expand"
 						className="invisible absolute top-2.5 right-2.5 text-gray-500 focus:outline-none group-hover:visible"
 					/>
-					<span className="truncate text-gray-50 w-full">{book.title}</span>
+					<span className="w-full truncate text-gray-50">{book.title}</span>
 					<span className="mt-2 text-gray-400 text-sm">{book.creator}</span>
 				</button>
 			</Dialog.Trigger>
@@ -112,7 +112,7 @@ export default function BookItem({ book }: Props) {
 											className="mx-auto rounded-md"
 										/>
 									)}
-									<Dialog.Title className="mt-8 text-center font-medium text-gray-50 text-lg max-w-xs mx-auto">
+									<Dialog.Title className="mx-auto mt-8 max-w-xs text-center font-medium text-gray-50 text-lg">
 										{book.title}
 									</Dialog.Title>
 									<Dialog.Description className="mt-4 text-gray-500">

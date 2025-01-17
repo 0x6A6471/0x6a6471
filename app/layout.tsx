@@ -20,7 +20,9 @@ export default function RootLayout({
 			<body className="bg-gray-1000 text-gray-50">
 				<Nav />
 
-				<main className="mx-auto mt-16 max-w-lg px-4 sm:px-0">{children}</main>
+				<main className="mx-auto mt-16 max-w-lg px-4 pb-28 sm:px-0">
+					{children}
+				</main>
 			</body>
 		</html>
 	);

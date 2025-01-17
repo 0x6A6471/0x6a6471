@@ -48,7 +48,7 @@ export default function Library({ read, reading, toRead }: Props) {
 
 	return (
 		<div className="space-y-6">
-			<div className="flex space-x-2 justify-center">
+			<div className="flex justify-center space-x-2">
 				{tabs.map(tab => (
 					<button
 						key={tab.id}
@@ -57,7 +57,7 @@ export default function Library({ read, reading, toRead }: Props) {
 							s === tab.id || (!s && tab.id === "reading")
 								? "bg-black/80 shadow-sm ring-1 ring-gray-950"
 								: "text-gray-500",
-							"flex items-center gap-2 px-4 py-1.5 rounded-xl transition-all duration-200 hover:bg-black/80 hover:text-gray-50 focus:text-gray-50 focus:bg-black/80",
+							"flex items-center gap-2 rounded-xl px-4 py-1.5 transition-all duration-200 hover:bg-black/80 hover:text-gray-50 focus:bg-black/80 focus:text-gray-50",
 						)}
 					>
 						{tab.label}

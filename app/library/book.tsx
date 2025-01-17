@@ -39,14 +39,14 @@ export default function BookItem({ book }: Props) {
 				<button
 					className={cn(
 						isOpen ? "invisible" : "",
-						"group relative flex w-full flex-col rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none",
+						"group relative flex w-full flex-col rounded-[20px] bg-black/80 p-4 text-left focus:outline-none",
 					)}
 				>
 					<Icon
 						name="arrows-expand"
-						className="invisible absolute top-2.5 right-2.5 text-gray-600 focus:outline-none group-hover:visible"
+						className="invisible absolute top-2.5 right-2.5 text-gray-500 focus:outline-none group-hover:visible"
 					/>
-					<span className="truncate text-gray-50">{book.title}</span>
+					<span className="truncate text-gray-50 w-full">{book.title}</span>
 					<span className="mt-2 text-gray-400 text-sm">{book.creator}</span>
 				</button>
 			</Dialog.Trigger>
@@ -96,13 +96,22 @@ export default function BookItem({ book }: Props) {
 									}}
 									className="z-50 h-full w-full overflow-hidden overflow-y-auto bg-gray-950/50 p-8 sm:h-fit sm:max-h-[90vh] sm:w-[90vw] sm:max-w-lg sm:rounded-[20px]"
 								>
-									<Image
-										className="mx-auto rounded-md"
-										src={book.cover}
-										alt="0x6A6471"
-										width={100}
-										height={100}
-									/>
+									{book.cover ? (
+										<Image
+											className="mx-auto rounded-md"
+											src={book.cover}
+											alt="0x6A6471"
+											width={100}
+											height={100}
+										/>
+									) : (
+										<Icon
+											name="book"
+											size="100"
+											variant="filled"
+											className="mx-auto rounded-md"
+										/>
+									)}
 									<Dialog.Title className="mt-8 text-center font-medium text-gray-50 text-lg">
 										{book.title}
 									</Dialog.Title>
@@ -111,7 +120,7 @@ export default function BookItem({ book }: Props) {
 									</Dialog.Description>
 									<Dialog.Close asChild>
 										<button
-											className="absolute top-2.5 right-2.5 rounded-lg p-1 text-gray-600 hover:bg-black focus:outline-none"
+											className="absolute top-2.5 right-2.5 rounded-lg p-1 text-gray-500 hover:bg-black focus:outline-none"
 											aria-label="Close"
 										>
 											<Icon name="x" />

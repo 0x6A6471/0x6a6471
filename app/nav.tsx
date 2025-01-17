@@ -13,7 +13,7 @@ export default function Nav() {
 		<motion.nav
 			initial={{ y: 100 }}
 			animate={{ y: 0, transition: { duration: 0.5 } }}
-			className="fixed right-2 bottom-8 left-2 z-10 mx-auto max-w-sm rounded-[20px] bg-gray-950 p-1.5 backdrop-blur-sm"
+			className="fixed right-2 bottom-8 left-2 z-10 mx-auto max-w-sm rounded-[20px] bg-gray-950/80 p-1.5 backdrop-blur-sm"
 		>
 			<ul className="flex items-center justify-between">
 				<li>

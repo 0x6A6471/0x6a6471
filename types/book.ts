@@ -1,9 +1,9 @@
 export type Book = {
+	cover?: string;
 	creator: string;
 	description: string;
 	guid: string;
 	link: string;
-	title: string;
-	cover: string;
 	pubDate: string;
+	title: string;
 };

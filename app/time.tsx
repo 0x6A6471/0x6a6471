@@ -20,7 +20,7 @@ export default function Time() {
   return (
     <time
       dateTime={time}
-      className="flex flex-col items-center gap-y-2 font-mono text-gray-700"
+      className="flex flex-col items-center gap-y-2 font-mono text-gray-500"
     >
       <span className="text-xs">{time} UTC</span>
       <span className="text-xl">

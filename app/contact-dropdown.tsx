@@ -66,7 +66,7 @@ export default function ContactDropdown() {
 	return (
 		<DropdownMenu.Root open={open} onOpenChange={setOpen}>
 			<DropdownMenu.Trigger asChild>
-				<button className="rounded-[14px] bg-gray-900 px-4 py-[7.8px] font-medium text-gray-100 hover:text-gray-50 focus:outline-none">
+				<button className="rounded-[14px] bg-gray-900/80 px-4 py-[7.8px] font-medium text-gray-100 hover:text-gray-50 focus:outline-none">
 					<AnimatePresence mode="wait">
 						<motion.span
 							key={copied ? "copied" : "contact"}
@@ -110,7 +110,7 @@ export default function ContactDropdown() {
 						<DropdownMenu.Content
 							align="end"
 							alignOffset={-6}
-							className="relative mb-3 rounded-[20px] bg-gray-950 p-1.5 text-gray-200 shadow backdrop-blur-sm"
+							className="relative mb-3 rounded-[20px] bg-gray-900/80 p-1.5 text-gray-200 shadow backdrop-blur-sm"
 						>
 							<motion.div
 								key={open ? "open" : "closed"}

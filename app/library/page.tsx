@@ -1,5 +1,9 @@
+import { Suspense } from "react";
+
 import parseRssFeed from "@/lib/rss";
 import Library from "./library";
+
+export const revalidate = 60;
 
 async function getOkuContent() {
 	const [read, reading, toRead] = await Promise.all([
@@ -21,7 +25,9 @@ export default async function LibraryPage() {
 				A collections of books I&apos;ve found over the last few years.
 			</p>
 			<div className="mx-auto h-[1px] max-w-48 bg-gray-950" />
-			<Library read={read} reading={reading} toRead={toRead} />
+			<Suspense>
+				<Library read={read} reading={reading} toRead={toRead} />
+			</Suspense>
 		</div>
 	);
 }

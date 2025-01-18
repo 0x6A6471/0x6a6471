@@ -94,7 +94,7 @@ export default function BookItem({ book }: Props) {
 										damping: 25,
 										stiffness: 300,
 									}}
-									className="z-50 h-full w-full overflow-hidden overflow-y-auto bg-gray-950/50 p-8 sm:h-fit sm:max-h-[60vh] sm:w-[90vw] sm:max-w-lg sm:rounded-[20px]"
+									className="z-50 h-full w-full overflow-hidden overflow-y-auto bg-gray-1000 p-8 sm:h-fit sm:max-h-[60vh] sm:w-[90vw] sm:max-w-lg sm:rounded-[20px] sm:bg-gray-950/80"
 								>
 									{book.cover ? (
 										<Image

@@ -39,7 +39,7 @@ export default function BookItem({ book }: Props) {
 				<button
 					className={cn(
 						isOpen ? "invisible" : "",
-						"group relative flex w-full flex-col rounded-[20px] bg-black/80 p-4 text-left focus:outline-none",
+						"group relative flex w-full flex-col rounded-[20px] bg-black p-4 text-left focus:outline-none",
 					)}
 				>
 					<Icon

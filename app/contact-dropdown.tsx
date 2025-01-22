@@ -6,7 +6,7 @@ import Icon from "@/components/ui/icon";
 import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
-import cn from "@/utils/classNames";
+import cn from "@/utils/cn";
 import Link from "next/link";
 
 const variants = {

@@ -30,6 +30,11 @@ export default {
 				1000: "#0a0a0a",
 			},
 		},
+		extend: {
+			animation: {
+				"spin-slow": "spin 2s linear infinite",
+			},
+		},
 	},
 	plugins: [],
 } satisfies Config;

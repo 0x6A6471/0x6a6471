@@ -4,7 +4,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
 
 import type { Book } from "@/types/book";
-import cn from "@/utils/classNames";
+import cn from "@/utils/cn";
 import Icon from "@/components/ui/icon";
 
 type Props = {

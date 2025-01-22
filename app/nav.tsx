@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import cn from "@/utils/classNames";
+import cn from "@/utils/cn";
 
 import ContactDropdown from "./contact-dropdown";
 

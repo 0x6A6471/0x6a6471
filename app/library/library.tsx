@@ -1,10 +1,12 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import type { Book } from "@/types/book";
-import cn from "@/utils/classNames";
 import BookItem from "./book";
+import cn from "@/utils/cn";
+import Pagination from "./pagination";
 
 type Props = {
 	read: Book[];
@@ -14,18 +16,21 @@ type Props = {
 
 type TabType = "reading" | "next" | "read";
 
+export const BOOKS_PER_PAGE = 10;
+
+const tabs: { id: TabType; label: string }[] = [
+	{ id: "reading", label: "Reading" },
+	{ id: "next", label: "Up next" },
+	{ id: "read", label: "Read" },
+];
+
 export default function Library({ read, reading, toRead }: Props) {
 	const router = useRouter();
 	const searchParams = useSearchParams();
-	const s = searchParams.get("s");
+	const s = searchParams.get("s") as TabType | null;
+	const [page, setPage] = useState(1);
 
-	const tabs: { id: TabType; label: string }[] = [
-		{ id: "reading", label: "Reading" },
-		{ id: "next", label: "Up next" },
-		{ id: "read", label: "Read" },
-	];
-
-	function getSelectedBooks() {
+	const selectedBooks = useMemo(() => {
 		switch (s) {
 			case "read":
 				return read;
@@ -34,7 +39,12 @@ export default function Library({ read, reading, toRead }: Props) {
 			default:
 				return reading;
 		}
-	}
+	}, [s, read, toRead, reading]);
+
+	const paginatedBooks = useMemo(() => {
+		const startIndex = (page - 1) * BOOKS_PER_PAGE;
+		return selectedBooks.slice(startIndex, startIndex + BOOKS_PER_PAGE);
+	}, [selectedBooks, page]);
 
 	function handleTabChange(tabId: TabType) {
 		const params = new URLSearchParams(searchParams);
@@ -43,12 +53,13 @@ export default function Library({ read, reading, toRead }: Props) {
 		} else {
 			params.set("s", tabId);
 		}
+		setPage(1);
 		router.push(`?${params.toString()}`);
 	}
 
 	return (
-		<div className="space-y-6">
-			<div className="flex justify-center space-x-2">
+		<div>
+			<div className="my-6 flex justify-center space-x-2">
 				{tabs.map(tab => (
 					<button
 						key={tab.id}
@@ -64,12 +75,12 @@ export default function Library({ read, reading, toRead }: Props) {
 					</button>
 				))}
 			</div>
-
-			<ul className="space-y-2">
-				{getSelectedBooks().map(book => (
+			<ul className="mb-2 space-y-2">
+				{paginatedBooks.map(book => (
 					<BookItem key={book.guid} book={book} />
 				))}
 			</ul>
+			<Pagination data={selectedBooks} page={page} setPage={setPage} />
 		</div>
 	);
 }

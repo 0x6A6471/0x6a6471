@@ -14,11 +14,11 @@ type Props = {
 	toRead: Book[];
 };
 
-type TabType = "reading" | "next" | "read";
+type Tab = "reading" | "next" | "read";
 
 export const BOOKS_PER_PAGE = 10;
 
-const tabs: { id: TabType; label: string }[] = [
+const tabs: { id: Tab; label: string }[] = [
 	{ id: "reading", label: "Reading" },
 	{ id: "next", label: "Up next" },
 	{ id: "read", label: "Read" },
@@ -27,7 +27,7 @@ const tabs: { id: TabType; label: string }[] = [
 export default function Library({ read, reading, toRead }: Props) {
 	const router = useRouter();
 	const searchParams = useSearchParams();
-	const s = searchParams.get("s") as TabType | null;
+	const s = searchParams.get("s") as Tab | null;
 	const [page, setPage] = useState(1);
 
 	const selectedBooks = useMemo(() => {
@@ -46,7 +46,7 @@ export default function Library({ read, reading, toRead }: Props) {
 		return selectedBooks.slice(startIndex, startIndex + BOOKS_PER_PAGE);
 	}, [selectedBooks, page]);
 
-	function handleTabChange(tabId: TabType) {
+	function handleTabChange(tabId: Tab) {
 		const params = new URLSearchParams(searchParams);
 		if (tabId === "reading") {
 			params.delete("s");

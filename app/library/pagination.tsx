@@ -34,12 +34,12 @@ export default function Pagination({ data, page, setPage }: Props) {
 
 	const handlePrevious = () => {
 		setPage(page - 1);
-		window.scrollTo(0, 0);
+		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
 	const handleNext = () => {
 		setPage(page + 1);
-		window.scrollTo(0, 0);
+		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
 	return (

@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
-import "./globals.css";
+
 import Nav from "./nav";
+import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "0x6A6471",
-	description: "0x6A6471",
+	title: "~/",
+	description:
+		"Software and design. Passionate about digital privacy, human-centric technology, and empowering user freedoms.",
+	openGraph: {
+		title: "~/",
+		description:
+			"Software and design. Passionate about digital privacy, human-centric technology, and empowering user freedoms.",
+		url: "https://0x6a6471.com",
+		siteName: "0x6A6471",
+		locale: "en-US",
+		type: "website",
+	},
+	icons: {
+		shortcut: "/favicon.ico",
+	},
 };
 
 export default function RootLayout({

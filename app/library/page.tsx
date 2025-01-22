@@ -1,9 +1,14 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 
 import parseRssFeed from "@/lib/rss";
 import Library from "./library";
 
 export const revalidate = 3600;
+
+export const metadata: Metadata = {
+	title: "~/library",
+};
 
 async function getOkuContent() {
 	const [read, reading, toRead] = await Promise.all([

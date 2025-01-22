@@ -24,8 +24,8 @@ export default function HomePage() {
 					<Name />
 				</div>
 				<p>
-					I like computers & design. I&apos;m also deeply interested in
-					technology that improves people&apos;s freedoms and privacy.
+					I like computers & design. My passion lies in creating technology that
+					protects individual privacy and digital freedom.
 				</p>
 				<p>
 					I&apos;m currently writing code to realize this vision at{" "}

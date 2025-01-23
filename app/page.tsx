@@ -1,36 +1,43 @@
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import RecentEndeavors from './RecentEndeavors';
+import Name from "./name";
+import Time from "./time";
 
-export default function Home() {
-  return (
-    <div className="space-y-16">
-      <div className="flex flex-col items-center space-y-2">
-        <h1 className="text-4xl font-bold text-gray-900">Jake Quinter</h1>
-        <h2 className="text-xl font-medium">Software Engineer</h2>
-      </div>
+export default function HomePage() {
+	return (
+		<div className="space-y-16">
+			<div className="flex flex-col items-center space-y-4">
+				<Image
+					className="rounded-2xl"
+					src="/0x6a6471.svg"
+					alt="0x6A6471"
+					width={100}
+					height={100}
+				/>
+				<Time />
+			</div>
 
-      <section className="space-y-4">
-        <p>
-          Hi, I&apos;m Jake. I&apos;m a software engineer based in Boston, MA
-          where I&apos;m currently helping ease decision-making fatigue when
-          choosing better-for-you products at{' '}
-          <Link
-            className="text-blue-500 hover:text-blue-600"
-            href="https://www.merryfield.com"
-          >
-            Merryfield
-          </Link>
-          .
-        </p>
-
-        <p>
-          Building towards a future where the worlds of engineering and design
-          unify to craft magical software experiences.
-        </p>
-      </section>
-
-      <RecentEndeavors />
-    </div>
-  );
+			<section className="space-y-2">
+				<div className="flex gap-x-1">
+					<p>Hi, I&apos;m </p>
+					<Name />
+				</div>
+				<p>
+					I like computers & design. My passion lies in creating technology that
+					protects individual privacy and digital freedom.
+				</p>
+				<p>
+					I&apos;m currently writing code to realize this vision at{" "}
+					<Link
+						href="https://onrampbitcoin.com"
+						className="text-orange-primary underline-offset-2 hover:underline"
+					>
+						Onramp
+					</Link>
+					.
+				</p>
+			</section>
+		</div>
+	);
 }

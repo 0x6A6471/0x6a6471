@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "~/food",
+	title: "~/writing",
 };
 
-export default function FoodPage() {
+export default function WritingPage() {
 	return (
 		<div
 			className="flex flex-col items-center justify-center"

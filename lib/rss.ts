@@ -1,19 +1,44 @@
-import Parser from 'rss-parser';
+function getTagContent(tag: string, content: string) {
+	const regex = new RegExp(`<${tag}[^>]*>(.*?)<\/${tag}>`, "s");
+	const match = content.match(regex);
 
-import { Book } from '@/types/rss';
+	return match
+		? match[1]
+				.trim()
+				.replace(/&lt;/g, "<")
+				.replace(/&gt;/g, ">")
+				.replace(/&amp;/g, "&")
+		: "";
+}
 
-export const getOkuContent = async () => {
-  const parser = new Parser();
+export default async function parseRssFeed(url: string) {
+	try {
+		const r = await fetch(url);
+		const xmlText = await r.text();
 
-  const { items: toRead } = (await parser.parseURL(
-    process.env.OKU_TO_READ_URL as string
-  )) as unknown as { items: Book[] };
-  const { items: currentlyReading } = (await parser.parseURL(
-    process.env.OKU_CURRENTLY_READING_URL as string
-  )) as unknown as { items: Book[] };
-  const { items: read } = (await parser.parseURL(
-    process.env.OKU_READ_URL as string
-  )) as unknown as { items: Book[] };
+		const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+		const items = [];
+		let match;
 
-  return { toRead, currentlyReading, read };
-};
+		while ((match = itemRegex.exec(xmlText)) !== null) {
+			const content = match[1];
+
+			items.push({
+				guid: getTagContent("guid", content),
+				title: getTagContent("title", content),
+				link: getTagContent("link", content),
+				description: getTagContent("description", content),
+				creator: getTagContent("dc:creator", content),
+				pubDate: getTagContent("pubDate", content),
+				cover:
+					getTagContent("oku:cover", content) ||
+					getTagContent("enclosure", content),
+			});
+		}
+
+		return items;
+	} catch (error) {
+		console.error("Error fetching RSS feed:", error);
+		return [];
+	}
+}

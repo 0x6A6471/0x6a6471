@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "~/food",
+};
+
 export default function FoodPage() {
 	return (
 		<div

@@ -1,4 +1,10 @@
-export default function BlogPage() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "~/writing",
+};
+
+export default function WritingPage() {
 	return (
 		<div
 			className="flex flex-col items-center justify-center"

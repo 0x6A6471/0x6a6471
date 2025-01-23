@@ -29,7 +29,7 @@ export default function Nav() {
 				</li>
 				<NavLink href="/library" label="Library" />
 				<NavLink href="/food" label="Food" />
-				<NavLink href="/blog" label="Blog" />
+				<NavLink href="/writing" label="Writing" />
 				<ContactDropdown />
 			</ul>
 		</motion.nav>

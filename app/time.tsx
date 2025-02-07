@@ -28,7 +28,7 @@ export default function Time() {
 			<span className="text-xs">{time} UTC</span>
 			<Link
 				href="https://bitcoin.org/bitcoin.pdf"
-				className="relative text-orange-primary [&>svg]:animate-spin-slow [&>svg]:drop-shadow-[0_0_8px_rgba(249,115,22,0.6)] hover:[&>svg]:animate-[spin_2s_linear_infinite_paused] hover:[&>svg]:drop-shadow-[0_0_12px_rgba(249,115,22,0.9)]"
+				className="relative text-orange-primary [&>svg]:animate-spin-slow [&>svg]:drop-shadow-[0_0_8px_rgba(249,115,22,0.6)] hover:[&>svg]:animate-[spin_3s_linear_infinite_paused] hover:[&>svg]:drop-shadow-[0_0_12px_rgba(249,115,22,0.9)]"
 			>
 				<Icon name="btc" size="24" />
 			</Link>

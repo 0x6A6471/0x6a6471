@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 
 import type { Food } from "@/types/food";
 import FoodCard from "./food-card";

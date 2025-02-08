@@ -20,7 +20,7 @@ export default function Nav() {
 					<Link href="/">
 						<Image
 							className="rounded-[14px]"
-							src="/0x6a6471.svg"
+							src="/images/0x6a6471.svg"
 							alt="Jake"
 							width={40}
 							height={40}

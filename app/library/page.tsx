@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 
+import Divider from "@/components/ui/divider";
 import parseRssFeed from "@/lib/rss";
 import Library from "./library";
 
@@ -29,7 +30,7 @@ export default async function LibraryPage() {
 			<p className="text-center text-gray-500">
 				A collections of books I&apos;ve found over the last few years.
 			</p>
-			<div className="mx-auto h-[1px] max-w-48 bg-gray-950" />
+			<Divider />
 			<Suspense>
 				<Library read={read} reading={reading} toRead={toRead} />
 			</Suspense>

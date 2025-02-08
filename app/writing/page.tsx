@@ -31,7 +31,7 @@ export default function WritingPage() {
 							<p className="w-full text-gray-50 truncate">
 								{post.metadata.title}
 							</p>
-							<div className="flex justify-between">
+							<div className="flex justify-between items-baseline">
 								<p className="text-gray-500 text-sm truncate">
 									{post.metadata.description}
 								</p>

@@ -24,8 +24,8 @@ export default function FoodCard({ item }: Props) {
 				alt={item.restaurant_name}
 				dpr="auto"
 				quality="auto"
-				width={300}
-				height={400}
+				width={450}
+				height={600}
 				crop="fill"
 				gravity="auto"
 			/>

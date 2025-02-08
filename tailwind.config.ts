@@ -37,6 +37,9 @@ export default {
 			brightness: {
 				40: ".40",
 			},
+			screens: {
+				xs: "450px",
+			},
 		},
 	},
 	plugins: [],

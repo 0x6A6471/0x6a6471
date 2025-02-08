@@ -10,7 +10,7 @@ type Props = {
 	food: Food[];
 };
 
-export default function FoodContent({ food }: Props) {
+export default function Food({ food }: Props) {
 	const [page, setPage] = useState(1);
 
 	const paginatedFood = useMemo(() => {
@@ -20,7 +20,7 @@ export default function FoodContent({ food }: Props) {
 
 	return (
 		<div>
-			<div className="mb-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
+			<div className="mb-2 grid grid-cols-1 xs:grid-cols-2 gap-2">
 				{paginatedFood.map(food => (
 					<FoodCard key={food.id} item={food} />
 				))}

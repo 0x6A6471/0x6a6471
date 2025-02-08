@@ -3,7 +3,8 @@ import path from "node:path";
 
 type Metadata = {
 	title: string;
-	description?: string;
+	description: string;
+	publishedAt: string;
 };
 
 function parseFrontmatter(fileContent: string) {

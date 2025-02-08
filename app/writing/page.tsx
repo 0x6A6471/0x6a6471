@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Divider from "@/components/ui/divider";
 import cn from "@/utils/cn";
+import { formatDate } from "@/utils/date-fns";
 
 import { getPosts } from "@/mdx/utils";
 
@@ -24,15 +25,20 @@ export default function WritingPage() {
 						<Link
 							href={`/writing/${post.slug}`}
 							className={cn(
-								"relative flex w-full flex-col rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none",
+								"relative flex flex-col w-full rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none space-y-2",
 							)}
 						>
-							<span className="w-full text-gray-50 truncate">
+							<p className="w-full text-gray-50 truncate">
 								{post.metadata.title}
-							</span>
-							<span className="mt-2 text-gray-400 text-sm truncate">
-								{post.metadata.description}
-							</span>
+							</p>
+							<div className="flex justify-between">
+								<p className="text-gray-500 text-sm truncate">
+									{post.metadata.description}
+								</p>
+								<p className="text-gray-500 text-xs">
+									{formatDate(post.metadata.publishedAt)}
+								</p>
+							</div>
 						</Link>
 					</li>
 				))}

@@ -20,7 +20,7 @@ export default function FoodContent({ food }: Props) {
 
 	return (
 		<div>
-			<div className="grid grid-cols-1 gap-2 mb-2 sm:grid-cols-2">
+			<div className="mb-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
 				{paginatedFood.map(food => (
 					<FoodCard key={food.id} item={food} />
 				))}

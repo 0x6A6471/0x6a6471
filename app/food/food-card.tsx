@@ -30,7 +30,7 @@ export default function FoodCard({ item }: Props) {
 				gravity="auto"
 			/>
 
-			<h2 className="absolute top-4 left-4 right-4 text-center font-medium text-gray-100 text-lg group-hover:text-gray-50">
+			<h2 className="absolute top-4 right-4 left-4 text-center font-medium text-gray-100 text-lg group-hover:text-gray-50">
 				{item.restaurant_name}
 			</h2>
 

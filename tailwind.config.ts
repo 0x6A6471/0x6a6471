@@ -34,6 +34,9 @@ export default {
 			animation: {
 				"spin-slow": "spin 3s linear infinite",
 			},
+			brightness: {
+				40: ".40",
+			},
 		},
 	},
 	plugins: [],

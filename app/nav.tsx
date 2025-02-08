@@ -21,7 +21,7 @@ export default function Nav() {
 						<Image
 							className="rounded-[14px]"
 							src="/images/0x6a6471.svg"
-							alt="Jake"
+							alt="0x6A6471 avatar"
 							width={40}
 							height={40}
 						/>

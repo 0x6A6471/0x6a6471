@@ -6,8 +6,6 @@ import Divider from "@/components/ui/divider";
 import type { Food as FoodType } from "@/types/food";
 import Food from "./food";
 
-export const revalidate = 3600;
-
 export const metadata: Metadata = {
 	title: "~/food",
 };
@@ -36,7 +34,7 @@ export default async function FoodPage() {
 			</p>
 			<Divider />
 
-			<Food data={food} />
+			<Food food={food} />
 		</div>
 	);
 }

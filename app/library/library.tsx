@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import type { Book } from "@/types/book";
 import BookItem from "./book";
 import cn from "@/utils/cn";
-import Pagination from "./pagination";
+import Pagination, { ITEMS_PER_PAGE } from "../pagination";
 
 type Props = {
 	read: Book[];
@@ -15,8 +15,6 @@ type Props = {
 };
 
 type Tab = "reading" | "next" | "read";
-
-export const BOOKS_PER_PAGE = 10;
 
 const tabs: { id: Tab; label: string }[] = [
 	{ id: "reading", label: "Reading" },
@@ -42,8 +40,8 @@ export default function Library({ read, reading, toRead }: Props) {
 	}, [s, read, toRead, reading]);
 
 	const paginatedBooks = useMemo(() => {
-		const startIndex = (page - 1) * BOOKS_PER_PAGE;
-		return selectedBooks.slice(startIndex, startIndex + BOOKS_PER_PAGE);
+		const startIndex = (page - 1) * ITEMS_PER_PAGE;
+		return selectedBooks.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 	}, [selectedBooks, page]);
 
 	function handleTabChange(tabId: Tab) {

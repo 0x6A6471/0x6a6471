@@ -10,7 +10,7 @@ export default function HomePage() {
 			<div className="flex flex-col items-center space-y-4">
 				<Image
 					className="rounded-2xl"
-					src="/0x6a6471.svg"
+					src="images/0x6a6471.svg"
 					alt="0x6A6471"
 					width={100}
 					height={100}

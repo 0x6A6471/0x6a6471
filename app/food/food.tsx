@@ -1,32 +1,31 @@
 "use client";
 
-// import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import type { Food } from "@/types/food";
 import FoodCard from "./food-card";
-// import Pagination from '../bookshelf/Pagination';
+import Pagination, { ITEMS_PER_PAGE } from "../pagination";
 
 type Props = {
-	data: Food[];
+	food: Food[];
 };
 
-export default function FoodContent({ data }: Props) {
-	// const [page, setPage] = useState(1);
+export default function FoodContent({ food }: Props) {
+	const [page, setPage] = useState(1);
 
-	// const determineResults = () => {
-	//   if (page === 1) {
-	//     return data.slice(0, 10);
-	//   }
-	//
-	//   return data.slice((page - 1) * 10, page * 10);
-	// };
+	const paginatedFood = useMemo(() => {
+		const startIndex = (page - 1) * ITEMS_PER_PAGE;
+		return food.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+	}, [food, page]);
 
 	return (
-		<>
-			<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-				{data && data.map(food => <FoodCard key={food.id} item={food} />)}
+		<div>
+			<div className="grid grid-cols-1 gap-2 mb-2 sm:grid-cols-2">
+				{paginatedFood.map(food => (
+					<FoodCard key={food.id} item={food} />
+				))}
 			</div>
-			{/*<Pagination data={data} page={page} setPage={setPage} />*/}
-		</>
+			<Pagination data={food} page={page} setPage={setPage} />
+		</div>
 	);
 }

@@ -30,7 +30,7 @@ export default function FoodCard({ item }: Props) {
 				gravity="auto"
 			/>
 
-			<h2 className="-translate-x-1/2 absolute top-4 left-1/2 text-center font-medium text-gray-100 text-lg group-hover:text-gray-50">
+			<h2 className="absolute top-4 left-4 right-4 text-center font-medium text-gray-100 text-lg group-hover:text-gray-50">
 				{item.restaurant_name}
 			</h2>
 
@@ -39,7 +39,7 @@ export default function FoodCard({ item }: Props) {
 				className="invisible absolute top-2.5 right-2.5 text-gray-200 focus:outline-none group-hover:visible"
 			/>
 
-			<div className="-translate-y-1/4 absolute top-1/4 left-6">
+			<div className="-translate-y-1/4 absolute top-16 left-6">
 				<div className="flex items-center gap-x-2 text-gray-200">
 					<Image
 						height={30}
@@ -54,7 +54,7 @@ export default function FoodCard({ item }: Props) {
 				</div>
 			</div>
 
-			<div className="-translate-y-1/4 absolute top-1/4 right-6">
+			<div className="-translate-y-1/4 absolute top-16 right-6">
 				<div className="flex items-center gap-x-2 text-gray-200">
 					<Image
 						height={30}

@@ -27,7 +27,7 @@ export default async function LibraryPage() {
 	return (
 		<div className="space-y-8">
 			<h1 className="text-center font-semibold text-4xl">Library</h1>
-			<p className="text-center text-gray-500">
+			<p className="text-center mx-auto max-w-md text-gray-500">
 				A collections of books I&apos;ve found over the last few years.
 			</p>
 			<Divider />

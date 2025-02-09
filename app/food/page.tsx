@@ -27,7 +27,7 @@ export default async function FoodPage() {
 	return (
 		<div className="space-y-8">
 			<h1 className="text-center font-semibold text-4xl">Food</h1>
-			<p className="text-center text-gray-500">
+			<p className="mx-auto max-w-md text-center text-gray-500">
 				My wife and I love eating healthy, but we also love enjoying great food.
 				Here&apos;s some of our favorite spots, rated and photographed along the
 				way.

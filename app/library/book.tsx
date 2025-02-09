@@ -47,7 +47,7 @@ export default function BookItem({ book }: Props) {
 						className="invisible absolute top-2.5 right-2.5 text-gray-500 focus:outline-none group-hover:visible"
 					/>
 					<span className="w-full truncate text-gray-50">{book.title}</span>
-					<span className="mt-2 text-gray-400 text-sm">{book.creator}</span>
+					<span className="mt-2 text-gray-500 text-sm">{book.creator}</span>
 				</button>
 			</Dialog.Trigger>
 

@@ -26,8 +26,8 @@ Here is my _\`getStaticProps\`_ function at my _\`/blog\`_ route used to pre-fet
 ```
 export const getStaticProps: GetStaticProps = async () => {
   const posts = postFilePaths.map(filePath => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-    const { content, data } = matter(source);
+  const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+  const { content, data } = matter(source);
 
     return {
       content,
@@ -58,11 +58,11 @@ const components = {
   li: LI,
   em: Code,
 	pre: props => (
-		<Highlight
-		  {...defaultProps}
-      theme={determineTheme()}
-      code={props.children.props.children}
-      language="jsx"
+	<Highlight
+	{...defaultProps}
+    theme={determineTheme()}
+    code={props.children.props.children}
+    language="jsx"
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={pre()} style={style}>

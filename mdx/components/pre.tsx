@@ -29,13 +29,13 @@ export default function pre({ children, className }: Props) {
 				<pre
 					className={cn(
 						jetbrainsMono.className,
-						"overflow-auto rounded-md p-4 my-4",
+						"overflow-auto rounded-md p-4 my-4 text-xs",
 					)}
 					style={style}
 				>
 					{tokens.map((line, i) => (
 						<div key={i} {...getLineProps({ line })} className="table-row">
-							<span className="table-cell pr-4 text-gray-500 select-none">
+							<span className="table-cell pr-1 text-gray-500 select-none">
 								{i + 1}
 							</span>
 							<span className="table-cell">

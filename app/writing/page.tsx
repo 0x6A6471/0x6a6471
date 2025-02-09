@@ -31,11 +31,11 @@ export default function WritingPage() {
 							<p className="w-full truncate text-gray-50">
 								{post.metadata.title}
 							</p>
-							<div className="flex items-baseline justify-between">
-								<p className="truncate text-gray-500 text-sm">
+							<div className="flex xs:flex-row flex-col items-baseline justify-between">
+								<p className="truncate whitespace-normal text-gray-500 text-sm">
 									{post.metadata.description}
 								</p>
-								<p className="text-gray-500 text-xs">
+								<p className="xs:block hidden text-gray-500 text-xs">
 									{formatDate(post.metadata.publishedAt)}
 								</p>
 							</div>

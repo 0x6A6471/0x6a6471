@@ -3,6 +3,7 @@ import path from "node:path";
 
 type Metadata = {
 	title: string;
+	slug: string;
 	description: string;
 	publishedAt: string;
 };

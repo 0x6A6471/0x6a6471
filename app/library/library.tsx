@@ -64,7 +64,7 @@ export default function Library({ read, reading, toRead }: Props) {
 						onClick={() => handleTabChange(tab.id)}
 						className={cn(
 							s === tab.id || (!s && tab.id === "reading")
-								? "bg-gray-950 shadow-sm ring-1 ring-gray-800"
+								? "bg-gray-950 shadow-xs ring-1 ring-gray-800"
 								: "text-gray-500",
 							"flex items-center gap-2 rounded-xl px-4 py-1.5 transition-all duration-200 hover:bg-gray-950 hover:text-gray-50 focus:bg-gray-950 focus:text-gray-50",
 						)}

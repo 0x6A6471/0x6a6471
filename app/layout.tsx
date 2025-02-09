@@ -31,7 +31,7 @@ export default function RootLayout({
 			<head>
 				<link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
 			</head>
-			<body className="bg-gray-1000 text-gray-50">
+			<body className="bg-gray-1000 text-gray-50 ">
 				<Nav />
 
 				<main className="mx-auto mt-16 max-w-lg px-4 pb-28 sm:px-0">

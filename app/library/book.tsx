@@ -39,12 +39,12 @@ export default function BookItem({ book }: Props) {
 				<button
 					className={cn(
 						isOpen ? "invisible" : "",
-						"group relative flex w-full flex-col rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none",
+						"group relative flex w-full flex-col rounded-[20px] bg-gray-950 p-4 text-left focus:outline-hidden",
 					)}
 				>
 					<Icon
 						name="arrows-expand"
-						className="invisible absolute top-2.5 right-2.5 text-gray-500 focus:outline-none group-hover:visible"
+						className="invisible absolute top-2.5 right-2.5 text-gray-500 focus:outline-hidden group-hover:visible"
 					/>
 					<span className="w-full truncate text-gray-50">{book.title}</span>
 					<span className="mt-2 text-gray-500 text-sm">{book.creator}</span>
@@ -120,7 +120,7 @@ export default function BookItem({ book }: Props) {
 									</Dialog.Description>
 									<Dialog.Close asChild>
 										<button
-											className="absolute top-2.5 right-2.5 rounded-lg p-1 text-gray-500 hover:bg-black focus:outline-none"
+											className="absolute top-2.5 right-2.5 rounded-lg p-1 text-gray-500 hover:bg-black focus:outline-hidden"
 											aria-label="Close"
 										>
 											<Icon name="x" />

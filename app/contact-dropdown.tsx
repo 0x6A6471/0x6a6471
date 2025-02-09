@@ -66,7 +66,7 @@ export default function ContactDropdown() {
 	return (
 		<DropdownMenu.Root open={open} onOpenChange={setOpen}>
 			<DropdownMenu.Trigger asChild>
-				<button className="rounded-[14px] bg-gray-700/80 px-4 py-[7.8px] font-medium text-gray-100 hover:text-gray-50 focus:outline-none">
+				<button className="rounded-[14px] bg-gray-700/80 px-4 py-[7.8px] font-medium text-gray-100 hover:text-gray-50 focus:outline-hidden">
 					<AnimatePresence mode="wait">
 						<motion.span
 							key={copied ? "copied" : "contact"}
@@ -110,7 +110,7 @@ export default function ContactDropdown() {
 						<DropdownMenu.Content
 							align="end"
 							alignOffset={-6}
-							className="relative mb-3 rounded-[20px] bg-gray-800/80 p-1.5 text-gray-200 shadow backdrop-blur-sm"
+							className="relative mb-3 rounded-[20px] bg-gray-800/80 p-1.5 text-gray-200 shadow-sm backdrop-blur-xs"
 						>
 							<motion.div
 								key={open ? "open" : "closed"}
@@ -120,7 +120,7 @@ export default function ContactDropdown() {
 								variants={variants}
 							>
 								<DropdownMenu.Item
-									className="flex cursor-default items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-none focus:bg-gray-800 focus:text-orange-primary"
+									className="flex cursor-default items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-hidden focus:bg-gray-800 focus:text-orange-primary"
 									onClick={copyToClipboard}
 								>
 									<Icon name="email" variant="filled" />
@@ -128,21 +128,21 @@ export default function ContactDropdown() {
 								</DropdownMenu.Item>
 
 								<Link href="https://github.com/0x6a6471">
-									<DropdownMenu.Item className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-none focus:bg-gray-800 focus:text-[#6cc644]">
+									<DropdownMenu.Item className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-hidden focus:bg-gray-800 focus:text-[#6cc644]">
 										<Icon name="github" variant="filled" />
 										Github
 									</DropdownMenu.Item>
 								</Link>
 
 								<Link href="https://primal.net/p/npub1y5ryp0a0wclym2sug2m2aqmahw3tdwjaclfamum3jd8wz4k6tpzsqk0kg7">
-									<DropdownMenu.Item className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-none focus:bg-gray-800 focus:text-[#6E56CF]">
+									<DropdownMenu.Item className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-hidden focus:bg-gray-800 focus:text-[#6E56CF]">
 										<Icon name="nostr" variant="filled" />
 										Nostr
 									</DropdownMenu.Item>
 								</Link>
 
 								<Link href="https://x.com/0x6a6471">
-									<DropdownMenu.Item className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-none focus:bg-gray-800 focus:text-[#1DA1F2]">
+									<DropdownMenu.Item className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-hidden focus:bg-gray-800 focus:text-[#1DA1F2]">
 										<Icon name="twitter" variant="filled" />
 										Twitter
 									</DropdownMenu.Item>

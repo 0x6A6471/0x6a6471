@@ -25,7 +25,7 @@ export default function WritingPage() {
 						<Link
 							href={`/writing/${post.slug}`}
 							className={cn(
-								"relative flex w-full flex-col space-y-2 rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none",
+								"relative flex w-full flex-col space-y-2 rounded-[20px] bg-gray-950 p-4 text-left focus:outline-hidden",
 							)}
 						>
 							<p className="w-full truncate text-gray-50">

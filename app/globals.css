@@ -1,22 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+@theme {
+  --background: #0a0a0a
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-orange-mute: #ffa233;
+  --color-orange-primary: #f7931a;
+  --color-orange-border: #9e5d0f;
+
+  --color-gray-50: #eeeeee;
+  --color-gray-100: #b3b3b3;
+  --color-gray-200: #7a7a7a;
+  --color-gray-300: #6d6d6d;
+  --color-gray-400: #606060;
+  --color-gray-500: #484848;
+  --color-gray-600: #3a3a3a;
+  --color-gray-700: #313131;
+  --color-gray-800: #292929;
+  --color-gray-900: #222222;
+  --color-gray-950: #181818;
+  --color-gray-1000: #0a0a0a;
+
+  --animate-spin-slow: spin 3s linear infinite;
+
+  --brightness-40: 0.4;
+
+  --breakpoint-xs: 450px;
 }
 
-html,
-body {
-	max-width: 100vw;
-	overflow-x: hidden;
-	color: var(--foreground);
-	background: var(--background);
-	font-family: "Satoshi", sans-serif;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    color: var(--foreground);
+    background: var(--background);
+    font-family: "Satoshi", sans-serif;
+  }
+
+  button {
+    cursor: default;
+  }
 }
 
-button {
-	cursor: default;
-}

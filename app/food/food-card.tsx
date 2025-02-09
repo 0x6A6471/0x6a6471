@@ -16,7 +16,7 @@ export default function FoodCard({ item }: Props) {
 	return (
 		<Link
 			href={item.link}
-			className="group relative rounded-lg shadow grayscale hover:cursor-pointer hover:grayscale-0"
+			className="group relative rounded-lg shadow-sm grayscale hover:cursor-pointer hover:grayscale-0"
 		>
 			<CldImage
 				src={`${FOLDER}/${item.cloudinary_public_id}`}
@@ -36,7 +36,7 @@ export default function FoodCard({ item }: Props) {
 
 			<Icon
 				name="external-link"
-				className="invisible absolute top-2.5 right-2.5 text-gray-200 focus:outline-none group-hover:visible"
+				className="invisible absolute top-2.5 right-2.5 text-gray-200 focus:outline-hidden group-hover:visible"
 			/>
 
 			<div className="-translate-y-1/4 absolute top-16 left-6">

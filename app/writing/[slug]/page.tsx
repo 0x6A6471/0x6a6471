@@ -5,13 +5,16 @@ import CustomMdx from "@/mdx/mdx";
 import { getPosts } from "@/mdx/utils";
 import Divider from "@/components/ui/divider";
 
+type Params = Promise<{ slug: string }>;
+
 export async function generateMetadata({
 	params,
 }: {
-	params: { slug: string };
+	params: Params;
 }): Promise<Metadata | undefined> {
+	const { slug } = await params;
 	const posts = getPosts();
-	const post = posts.find(post => post.slug === params.slug);
+	const post = posts.find(post => post.slug === slug);
 
 	if (!post) {
 		return {

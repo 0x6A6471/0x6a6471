@@ -25,14 +25,14 @@ export default function WritingPage() {
 						<Link
 							href={`/writing/${post.slug}`}
 							className={cn(
-								"relative flex flex-col w-full rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none space-y-2",
+								"relative flex w-full flex-col space-y-2 rounded-[20px] bg-gray-950 p-4 text-left focus:outline-none",
 							)}
 						>
-							<p className="w-full text-gray-50 truncate">
+							<p className="w-full truncate text-gray-50">
 								{post.metadata.title}
 							</p>
-							<div className="flex justify-between items-baseline">
-								<p className="text-gray-500 text-sm truncate">
+							<div className="flex items-baseline justify-between">
+								<p className="truncate text-gray-500 text-sm">
 									{post.metadata.description}
 								</p>
 								<p className="text-gray-500 text-xs">

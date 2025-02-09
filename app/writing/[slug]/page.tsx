@@ -53,7 +53,7 @@ export default async function Blog({
 			<h1 className="text-center font-semibold text-4xl">
 				{post.metadata.title}
 			</h1>
-			<p className="text-center mx-auto max-w-md text-gray-500">
+			<p className="mx-auto max-w-md text-center text-gray-500">
 				{post.metadata.description}
 			</p>
 			<Divider />

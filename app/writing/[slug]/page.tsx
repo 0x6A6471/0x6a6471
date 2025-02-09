@@ -18,12 +18,12 @@ export async function generateMetadata({
 
 	if (!post) {
 		return {
-			title: "Post Not Found",
+			title: "~/writing/404",
 		};
 	}
 
 	return {
-		title: post.metadata.title,
+		title: `~/writing/${post.metadata.slug}`,
 		description: post.metadata.description,
 	};
 }

@@ -2,7 +2,6 @@ import { Pool, type QueryResult } from "pg";
 
 type PostgresParameter = string | number | boolean | null | Date | Buffer;
 
-// Default type for database rows - all fields are unknown
 type DefaultRow = Record<string, unknown>;
 
 const pool = new Pool({

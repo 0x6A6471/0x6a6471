@@ -23,14 +23,15 @@ export default function Time() {
 	return (
 		<time
 			dateTime={time}
-			className="flex flex-col items-center gap-y-2 font-mono text-gray-500"
+			className="flex flex-col items-center font-mono text-gray-500 gap-y-2"
 		>
 			<span className="text-xs">{time} UTC</span>
 			<Link
 				href="https://bitcoin.org/bitcoin.pdf"
-				className="relative text-orange-primary [&>svg]:animate-spin-slow [&>svg]:drop-shadow-[0_0_8px_rgba(249,115,22,0.6)] [&>svg]:hover:animate-[spin_3s_linear_infinite_paused] [&>svg]:hover:drop-shadow-[0_0_12px_rgba(249,115,22,0.9)]"
+				className="flex gap-x-2 items-center relative [&>svg]:drop-shadow-[0_0_8px_rgba(249,115,22,0.6)] hover:[&>svg]:drop-shadow-[0_0_12px_rgba(249,115,22,0.9)]"
 			>
-				<Icon name="btc" size="24" />
+				<p className="text-gray-500 pt-1">Study</p>
+				<Icon name="btc" size="24" className="text-orange-primary" />
 			</Link>
 		</time>
 	);

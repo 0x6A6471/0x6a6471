@@ -5,7 +5,8 @@ import Divider from "@/components/ui/divider";
 import parseRssFeed from "@/lib/rss";
 import Library from "./library";
 
-export const revalidate = 3600;
+export const revalidate = 86_400; // 24 hours
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
 	title: "~/library",

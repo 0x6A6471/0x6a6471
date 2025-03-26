@@ -6,6 +6,8 @@ import Divider from "@/components/ui/divider";
 import type { Food as FoodType } from "@/types/food";
 import Food from "./food";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
 	title: "~/food",
 };

@@ -7,6 +7,8 @@ import { formatDate } from "@/utils/date-fns";
 
 import { getPosts } from "@/mdx/utils";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
 	title: "~/writing",
 };

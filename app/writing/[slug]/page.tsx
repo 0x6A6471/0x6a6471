@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 
 import CustomMdx from "@/mdx/mdx";
-import { getPosts } from "@/mdx/utils";
+import { type Post, getPost, getPosts } from "@/mdx/utils";
 import Divider from "@/components/ui/divider";
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
 type Params = Promise<{ slug: string }>;
 
@@ -42,11 +44,7 @@ export default async function Blog({
 	params: Promise<{ slug: string }>;
 }) {
 	const slug = (await params).slug;
-	const post = getPosts().find(post => post.slug === slug);
-
-	if (!post) {
-		notFound();
-	}
+	const post = getPost(slug) as Post;
 
 	return (
 		<div className="space-y-8">

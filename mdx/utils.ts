@@ -8,6 +8,12 @@ type Metadata = {
 	publishedAt: string;
 };
 
+export type Post = {
+	metadata: Metadata;
+	slug: string;
+	content: string;
+};
+
 function parseFrontmatter(fileContent: string) {
 	const frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
 	const content = fileContent.replace(frontmatterRegex, "").trim();
@@ -51,4 +57,8 @@ function getMdxData(dir: fs.PathLike) {
 
 export function getPosts() {
 	return getMdxData(path.join(process.cwd(), "mdx", "posts"));
+}
+
+export function getPost(slug: string) {
+	return getPosts().find(post => post.slug === slug);
 }

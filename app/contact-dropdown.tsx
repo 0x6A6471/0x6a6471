@@ -134,7 +134,7 @@ export default function ContactDropdown() {
 									</DropdownMenu.Item>
 								</Link>
 
-								<Link href="https://primal.net/p/npub1y5ryp0a0wclym2sug2m2aqmahw3tdwjaclfamum3jd8wz4k6tpzsqk0kg7">
+								<Link href="https://primal.net/0x6a6471">
 									<DropdownMenu.Item className="flex items-center gap-4 rounded-[14px] px-4 py-2.5 text-sm outline-hidden focus:bg-gray-800 focus:text-[#6E56CF]">
 										<Icon name="nostr" variant="filled" />
 										Nostr

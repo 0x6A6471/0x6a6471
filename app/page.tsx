@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Name from "./name";
 import Time from "./time";
 
 export default function HomePage() {
@@ -19,10 +18,7 @@ export default function HomePage() {
 			</div>
 
 			<section className="space-y-2">
-				<div className="flex gap-x-1">
-					<p>Hi, I&apos;m </p>
-					<Name />
-				</div>
+				<p>Hi, I&apos;m jdq.</p>
 				<p>
 					I like computers & design. My passion lies in creating technology that
 					protects individual privacy and digital freedom.

@@ -26,7 +26,7 @@ export default function Time() {
 	return (
 		<time
 			dateTime={time}
-			className="flex flex-col items-center font-mono text-gray-400 gap-y-2"
+			className="flex flex-col items-center font-mono text-gray-500 gap-y-2"
 		>
 			<span className="text-sm">{time} UTC</span>
 			<Link

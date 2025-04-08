@@ -25,7 +25,6 @@ export default function useBtc() {
 				}
 
 				const data = await response.json();
-				console.log(data);
 
 				if (isMounted) {
 					setBtc(data);

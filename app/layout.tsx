@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import Nav from "./nav";
 import "./globals.css";
 
@@ -37,6 +40,9 @@ export default function RootLayout({
 				<main className="mx-auto mt-16 max-w-lg px-4 pb-28 sm:px-0">
 					{children}
 				</main>
+
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);

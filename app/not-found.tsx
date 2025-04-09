@@ -11,7 +11,7 @@ export default function NotFound() {
 			className="flex flex-col items-center justify-center space-y-2"
 			style={{ minHeight: "calc(100vh - 176px)" }}
 		>
-			<h1 className="font-semibold text-gray-700 mb-8">Not found</h1>
+			<h1 className="mb-8 font-semibold text-gray-700">Not found</h1>
 			<Image
 				src="/images/not-found.png"
 				alt="Buy Bitcoin Sign"

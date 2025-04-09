@@ -26,16 +26,16 @@ export default function Time() {
 	return (
 		<time
 			dateTime={time}
-			className="flex flex-col items-center font-mono text-gray-500 gap-y-2"
+			className="flex flex-col items-center gap-y-2 font-mono text-gray-500"
 		>
 			<span className="text-sm">{time} UTC</span>
 			<Link
 				href="https://bitcoin.org/bitcoin.pdf"
-				className="flex items-center relative [&>svg]:drop-shadow-[0_0_8px_rgba(249,115,22,0.6)] hover:[&>svg]:drop-shadow-[0_0_12px_rgba(249,115,22,0.9)]"
+				className="relative flex items-center [&>svg]:drop-shadow-[0_0_8px_rgba(249,115,22,0.6)] hover:[&>svg]:drop-shadow-[0_0_12px_rgba(249,115,22,0.9)]"
 			>
 				<Icon name="btc" size="20" className="text-orange-primary" />
 				{!error ? (
-					<div className="w-24 flex justify-end">
+					<div className="flex w-24 justify-end">
 						{btc?.amount ? (
 							<p className="pt-1 text-sm">{formatUsd(Number(btc?.amount))}</p>
 						) : (

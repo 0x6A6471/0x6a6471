@@ -46,7 +46,7 @@ export default function FoodCard({ item }: Props) {
 						width={30}
 						src="/images/0x6a6471.svg"
 						alt="0x6A6471 avatar"
-						className="rounded-full"
+						className="rounded-full bg-black p-0.5"
 					/>
 					<p className="font-medium">
 						{Number(item["0x6a6471_rating"]).toFixed(1)}
@@ -61,7 +61,7 @@ export default function FoodCard({ item }: Props) {
 						width={30}
 						src="/images/other.svg"
 						alt="Other avatar"
-						className="rounded-full"
+						className="rounded-full bg-black p-0.5"
 					/>
 					<p className="font-medium">{Number(item.other_rating).toFixed(1)}</p>
 				</div>

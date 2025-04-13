@@ -8,7 +8,7 @@ export default function HomePage() {
 		<div className="space-y-16">
 			<div className="flex flex-col items-center space-y-4">
 				<Image
-					className="rounded-2xl"
+					className="rounded-3xl bg-gray-950/50 flex items-center justify-center"
 					src="images/0x6a6471.svg"
 					alt="0x6A6471"
 					width={100}

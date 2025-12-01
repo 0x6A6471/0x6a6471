@@ -1,10 +1,10 @@
 "use client";
 
+import Icon from "@/components/ui/icon";
+import type { Food } from "@/types/food";
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
-import { CldImage } from "next-cloudinary";
-import type { Food } from "@/types/food";
-import Icon from "@/components/ui/icon";
 
 type Props = {
 	item: Food;
@@ -44,7 +44,7 @@ export default function FoodCard({ item }: Props) {
 					<Image
 						height={30}
 						width={30}
-						src="/images/0x6a6471.svg"
+						src="/images/0x6A6471.svg"
 						alt="0x6A6471 avatar"
 						className="rounded-full bg-black p-0.5"
 					/>

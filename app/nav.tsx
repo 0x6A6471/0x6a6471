@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import cn from "@/utils/cn";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import ContactDropdown from "./contact-dropdown";
 
@@ -20,7 +20,7 @@ export default function Nav() {
 					<Link href="/">
 						<Image
 							className="rounded-[14px]"
-							src="/images/0x6a6471.svg"
+							src="/images/0x6A6471.svg"
 							alt="0x6A6471 avatar"
 							width={40}
 							height={40}

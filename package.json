@@ -16,12 +16,12 @@
 		"@vercel/speed-insights": "^1.2.0",
 		"framer-motion": "^11.17.0",
 		"gray-matter": "^4.0.3",
-		"next": "15.1.4",
+		"next": "15.1.9",
 		"next-cloudinary": "^6.16.0",
 		"next-mdx-remote": "^5.0.0",
 		"pg": "^8.13.1",
-		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react": "^19.2.1",
+		"react-dom": "^19.2.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
